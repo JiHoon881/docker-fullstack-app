@@ -1,0 +1,33 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "fronted",
+            "image": "kshj12/docker-frontend",
+            "hostname": "fronted",
+            "essential": false,
+            "memory": 128
+        },
+        {
+            "name": "backend",
+            "image": "kshj12/docker-backend",
+            "hostname": "backend",
+            "essential": false,
+            "memory": 128
+        },
+        {
+            "name": "nginx",
+            "image": "kshj12/docker-nginx",
+            "hostname": "nginx",
+            "essential": false,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["fronted", "backend"],
+            "memory": 128
+        }
+    ]
+}
