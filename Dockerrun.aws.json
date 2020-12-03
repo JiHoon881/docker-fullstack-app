@@ -2,9 +2,9 @@
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
         {
-            "name": "fronted",
+            "name": "frontend",
             "image": "kshj12/docker-frontend",
-            "hostname": "fronted",
+            "hostname": "frontend",
             "essential": false,
             "memory": 128
         },
@@ -26,7 +26,7 @@
                     "containerPort": 80
                 }
             ],
-            "links": ["fronted", "backend"],
+            "links": ["frontend", "backend"],
             "memory": 128
         }
     ]
