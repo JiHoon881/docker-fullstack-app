@@ -31,7 +31,7 @@ deploy:
   region: "ap-northeast-2."
   app: "docker-fullstack-app"
   env: "DockerFullstackApp-env"
-  bucket_name: "elasticbeanstalk-ap-northeast-2-886078054091"
+  bucket_name: elasticbeanstalk-ap-northeast-2-886078054091
   bucket_path: "docker-fullstack-app"
   on:
     branch: master
