@@ -4,23 +4,18 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  
-  const [lists, setLists] = useState([]);
-  const [value, setValue] = useState("");
 
   useEffect(() => {
     //여기서 데이터베이스에 있는 값을 가져온다.
     axios.get('/api/values')
       .then(response => {
-        if(response.data !== "") {
-          alert('값을 입력해주세요');
-        } else if(response.data.success) {
-          console.log('response', response)
-          setLists([...lists, response.data])
-          setValue("");
-        }
+        console.log('response', response)
+        setLists(response.data)
       })
-  }, [lists])
+  }, [])
+  
+  const [lists, setLists] = useState([]);
+  const [value, setValue] = useState("");
 
   const ChangeHandler = (Event) => {
     setValue(Event.currentTarget.value)
