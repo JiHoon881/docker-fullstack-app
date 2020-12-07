@@ -19,7 +19,7 @@
             "name": "nginx",
             "image": "kshj12/docker-nginx",
             "hostname": "nginx",
-            "essential": false,
+            "essential": true,
             "portMappings": [
                 {
                     "hostPort": 80,
