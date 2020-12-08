@@ -40,7 +40,8 @@ app.get('/api/values', function(req, res) {
 // 클라이언트에서 입력한 값을 데이터베이스 lists 테이블에 넣어주기
 app.post('/api/value', function (req, res, next) {
     // 데이터베이스에 값 넣어주기
-    db.pool.query(`INSERT INTO lists (value) VALUES("${req.body.value}")`,
+    db.pool.query(`INSERT INTO lists (value) VALUES("${req.body.value}")`, // delete from lists where value = '';
+    db.pool.query(`DELETE FROM lists WHERE value = ''`),
     (err, results, fileds) => {
         if (err)
             return res.status(500).send(err)
