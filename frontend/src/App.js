@@ -42,18 +42,18 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div className="container">
-          {lists && lists.reverse().map((list, index) => (
-            <li key={index}>{list.value}</li>
-          ))}
           <form className="example" onSubmit={submitHandler}>
             <input
               type="text"
               placeholder="입력해주세요..."
               onChange={ChangeHandler}
               value={value}
-            />
+              />
             <button type="submit">확인</button>
           </form>
+          {lists && lists.reverse().map((list, index) => (
+            <li key={index}>{list.value}</li>
+          ))}
         </div>
       </header>
     </div>
