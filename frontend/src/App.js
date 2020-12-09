@@ -51,7 +51,7 @@ function App() {
               />
             <button type="submit">확인</button>
           </form>
-          {lists && lists.reverse().map((list, index) => (
+          {lists.reverse() && lists.reverse().map((list, index) => (
             <li key={index}>{list.value}</li>
           ))}
         </div>
