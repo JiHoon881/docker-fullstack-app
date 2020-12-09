@@ -51,7 +51,7 @@ function App() {
               />
             <button type="submit">확인</button>
           </form>
-          {lists.reverse() && lists.map((list, index) => (
+          {lists && lists.reverse().map((list, index) => (
             <li key={index}>{list.value}</li>
           ))}
         </div>
@@ -61,4 +61,3 @@ function App() {
 }
 
 export default App;
-
