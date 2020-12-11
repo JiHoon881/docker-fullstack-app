@@ -27,10 +27,17 @@ services:
       - ./backend:/app
     environment: 
       MYSQL_HOST: mysql
-      MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: jihoon4579
-      MYSQL_DATABASE: myapp
+      MYSQL_USER: troo
+      MYSQL_ROOT_PASSWORD: jihoon123
+      MYSQL_DATABASE: meapp
       MYSQL_PORT: 3306
+
+    # environment: 
+      # MYSQL_HOST: mysql
+      # MYSQL_USER: root
+      # MYSQL_ROOT_PASSWORD: jihoon4579
+      # MYSQL_DATABASE: myapp
+      # MYSQL_PORT: 3306
 
       
   # mysql:
